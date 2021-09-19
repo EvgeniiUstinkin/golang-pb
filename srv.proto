@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service SrvService {
+  rpc CallFunc(SrvRequest) returns (SrvResponse) {}
+}
+
+message SrvRequest {
+  string methodName = 1;
+  string model = 2;
+}
+
+message SrvResponse {
+  string result = 1;
+}
+
