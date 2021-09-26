@@ -2,6 +2,7 @@ syntax = "proto3";
 
 service SrvService {
   rpc CallFunc(SrvRequest) returns (SrvResponse) {}
+  rpc GetVersion(VersionRequest) returns (VersionResponse) {}
 }
 
 message SrvRequest {
@@ -11,6 +12,13 @@ message SrvRequest {
 }
 
 message SrvResponse {
+  string result = 1;
+}
+
+message VersionRequest {
+}
+
+message VersionResponse {
   string result = 1;
 }
 
